@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="beginning.tdd.example">
+	<logger name="beginning.tdd.exercise">
 		<level value="info" />
 	</logger>
 	
