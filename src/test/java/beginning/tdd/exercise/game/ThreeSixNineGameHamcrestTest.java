@@ -50,12 +50,48 @@ public class ThreeSixNineGameHamcrestTest {
 	}
 
 	@Test
-	public void 입력값이_minus1인_경우_RuntimeException_처리한다() {
-		try {
-			int number = -1;
-			ThreeSixNineGame.call(number);
-			fail();
-		} catch (RuntimeException e) {
-		}
+	public void 숫자_36936943_입력() {
+		// given
+		int number = 36936943;
+		String expectedResult = "짝짝짝짝짝짝짝";
+
+		// when
+		String actualResult = ThreeSixNineGame.call(number);
+
+		// then
+		assertEquals(expectedResult, actualResult);
+		assertThat(actualResult, is(expectedResult));
 	}
+
+	@Test
+	public void 숫자_1245721_입력() {
+		// given
+		int number = 1245721;
+		String expectedResult = "1245721";
+
+		// when
+		String actualResult = ThreeSixNineGame.call(number);
+
+		// then
+		assertEquals(expectedResult, actualResult);
+		assertThat(actualResult, is(expectedResult));
+	}
+
+	@Test
+	public void 숫자_3999_입력() {
+		// given
+		int number = 3999;
+		String expectedResult = "짝짝짝짝";
+		String notExpectedResult = "3999";
+
+		// when
+		String actualResult = ThreeSixNineGame.call(number);
+
+		// then
+		assertEquals(expectedResult, actualResult);
+		assertThat(actualResult, is(not(notExpectedResult)));
+		assertThat(actualResult, is(expectedResult));
+		assertNotSame(notExpectedResult, actualResult);
+	}
+
 }
