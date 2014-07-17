@@ -1,6 +1,6 @@
 package beginning.tdd.exercise.hamcrest;
 
-public class HelloWorld {
+public class HamcrestExample {
 	public String getMessage(String message) {
 		return "Hello " + message + "!";
 	}

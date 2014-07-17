@@ -1,4 +1,4 @@
-package beginning.tdd.exercise.hamcrest;
+package beginning.tdd.exercise.hamcrest.custom;
 
 import org.hamcrest.Description;
 import org.hamcrest.Factory;

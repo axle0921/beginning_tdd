@@ -1,7 +1,7 @@
-package beginning.tdd.exercise.hamcrest;
+package beginning.tdd.exercise.hamcrest.custom;
 
-import static beginning.tdd.exercise.hamcrest.AreEvenNumbers.*;
-import static beginning.tdd.exercise.hamcrest.IsNotANumber.*;
+import static beginning.tdd.exercise.hamcrest.custom.AreEvenNumbers.*;
+import static beginning.tdd.exercise.hamcrest.custom.IsNotANumber.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 

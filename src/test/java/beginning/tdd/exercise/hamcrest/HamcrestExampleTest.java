@@ -6,14 +6,12 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import beginning.tdd.exercise.hamcrest.HelloWorld;
-
 public class HamcrestExampleTest {
-	private HelloWorld sut;
+	private HamcrestExample sut;
 
 	@Before
 	public void setUp() {
-		sut = new HelloWorld();
+		sut = new HamcrestExample();
 	}
 
 	@Test
@@ -47,12 +45,13 @@ public class HamcrestExampleTest {
 	public void trueExample() {
 		// given
 		String someMessage = "World";
+		String expectedResult = "Hello1";
 
 		// when
 		String actualResult = sut.getMessage(someMessage);
 
 		// then
 		assertTrue(actualResult.indexOf("Hello1") > -1); // Failure Trace 비교
-		assertThat(actualResult, containsString("Hello1")); // Failure Trace 비교
+		assertThat(actualResult, containsString(expectedResult)); // Failure Trace 비교
 	}
 }

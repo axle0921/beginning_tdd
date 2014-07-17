@@ -20,9 +20,16 @@ public class HasItemTest {
 		sut.add("z");
 	}
 
+	/**
+	 * assertTrue Vs. assertThat : 가독성, 디버깅
+	 */
 	@Test
 	public void hasItemExample() {
-		assertTrue(sut.contains("x") || sut.contains("y") || sut.contains("z"));
-		assertThat(sut, hasItem(anyOf(equalTo("x"), equalTo("y"), equalTo("z"))));
+		String expectedOne = "x";
+		String expectedTwo = "y";
+		String expectedThree = "x";
+
+		assertTrue(sut.contains(expectedOne) || sut.contains(expectedTwo) || sut.contains(expectedThree));
+		assertThat(sut, hasItem(anyOf(equalTo(expectedOne), equalTo(expectedTwo), equalTo(expectedThree))));
 	}
 }

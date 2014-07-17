@@ -47,13 +47,8 @@ public class ParameterizedSimpleEscapeTest {
 
 	@Parameters
 	public static Collection<String[]> getTestData() {
-		return Arrays.asList(new String[][] {
-				{ "&quot;", "\"" },
-				{ "&lt;", "<" },
-				{ "&gt;", ">" },
-				{ "&amp;", "&" },
+		return Arrays.asList(new String[][] { { "&quot;", "\"" }, { "&lt;", "<" }, { "&gt;", ">" }, { "&amp;", "&" },
 				{ "&quot;&lt;&gt;&amp;", "\"<>&" },
-				{ "&quot;String&lt;String&gt;String&amp;String",
-						"\"String<String>String&String" }, { "", "" } });
+				{ "&quot;String&lt;String&gt;String&amp;String", "\"String<String>String&String" }, { "", "" } });
 	}
 }
