@@ -18,7 +18,7 @@ Test Double 실습을 다음의 순서로 하오니 참고하여 진행 바랍�
 1) mockito 예
 - BasicMockitoTest
 
-3. Mockito 리뷰
+3. Mockito 리뷰 & 연습
 1) BasicMockitoTest
 2) AnnotativeMockitoTest
 3) BehaviorStyleTest
@@ -28,3 +28,5 @@ Test Double 실습을 다음의 순서로 하오니 참고하여 진행 바랍�
 4. Test Double 연습문제
 1) 뉴스 시각 노출
 - ArticleServiceTimeTest
+  : fake
+  : mockito
