@@ -31,6 +31,11 @@
             <version>${spring.version}</version>
         </dependency>
         <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
@@ -152,7 +157,25 @@
 		    <artifactId>hamcrest-all</artifactId>
 		    <version>1.3</version>
 		    <scope>test</scope>
-		</dependency>        
+		</dependency>      
+		
+		<!-- database -->
+		<dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+          
 	</dependencies>
     <build>
         <plugins>
