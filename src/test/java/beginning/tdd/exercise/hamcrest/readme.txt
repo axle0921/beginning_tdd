@@ -21,6 +21,6 @@ Hamcrest 실습을 다음의 순서로 하오니 참고하여 진행 바랍니�
 2) CustomMatcherTest
 - custom matcher : IsNotANumber, AreEvenNumbers
 
-3. 실습
+3. Hamcrest 실습
 1) AssertToHamcrestTest 의 assertion을 Hamcrest matcher 로 변경.
 2) 워밍업 연습문제의 assertion을 Hamcrest matcher 로 변경.

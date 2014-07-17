@@ -1,4 +1,4 @@
-package beginning.tdd.exercise;
+package beginning.tdd.exercise.tfd;
 
 public class Template {
 	private String name;
