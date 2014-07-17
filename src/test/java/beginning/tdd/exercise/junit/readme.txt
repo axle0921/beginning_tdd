@@ -44,3 +44,5 @@ JUnit4 실습을 다음의 순서로 하오니 참고하여 진행 바랍니다.
 - 요구 기능별 testable 충족 목표.  
 2) RefactoredAlphabet / RefactoredAlphabetTest
 - 리팩토링 목표.
+3) 3 6 9 게임.
+- ThreeSixNineGameTest
