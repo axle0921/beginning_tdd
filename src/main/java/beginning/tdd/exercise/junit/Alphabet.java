@@ -67,7 +67,7 @@ public class Alphabet {
 		String lowerAlphabet = toLowerCase(input);
 		String deduplicatedAlphabet = toRemoveDuplication(lowerAlphabet);
 
-		char[] letters = deduplicatedAlphabet.toLowerCase().toCharArray();
+		char[] letters = deduplicatedAlphabet.toCharArray();
 		int score = 0;
 
 		for (char ch : letters) {

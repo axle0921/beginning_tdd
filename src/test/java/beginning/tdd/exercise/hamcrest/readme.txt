@@ -9,7 +9,7 @@ Hamcrest 실습을 다음의 순서로 하오니 참고하여 진행 바랍니�
 - anyOf()
 - any()
 - anything()
-- describedAs()
+- describedAs() // TODO
 - equalTo()
 - in- stanceOf()
 - is()

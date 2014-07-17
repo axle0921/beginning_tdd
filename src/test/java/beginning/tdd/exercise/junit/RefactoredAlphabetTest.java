@@ -28,11 +28,14 @@ public class RefactoredAlphabetTest {
 
 	@Test
 	public void 대소문자_구분없이_알파벳_졍렬하기() {
+		// given
 		String someAlphabet = "ADCcbehIFg";
 		String expectedResult = "abcdefghi";
 
+		// when
 		String actualResult = sut.sortBy(someAlphabet);
 
+		// then
 		assertEquals(expectedResult, actualResult);
 	}
 
@@ -57,6 +60,7 @@ public class RefactoredAlphabetTest {
 
 			fail();
 		} catch (IllegalArgumentException e) {
+			// 입력값이_empty인_경우_IllegalArgumentException_처리한다
 		}
 	}
 

@@ -3,27 +3,28 @@ package beginning.tdd.exercise.testdouble;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
-import beginning.tdd.exercise.testdouble.Car;
-import beginning.tdd.exercise.testdouble.Engine;
-
 public class CarTest {
+	private Engine fakeSut;
+
+	@Before
+	public void setUp() {
+		fakeSut = new FakeEngineImpl();
+	}
+
 	@Test
 	public void engineIsStartedWhenCarStart() {
-		Engine engine = new FakeEngineImpl();
+		new Car(fakeSut).start();
 
-		new Car(engine).start();
-
-		assertThat(((FakeEngineImpl) engine).isRunning(), is(true));
+		assertThat(((FakeEngineImpl) fakeSut).isRunning(), is(true));
 	}
 
 	@Test
 	public void engineIsStoppedWhenCarStop() {
-		Engine fakeEngine = new FakeEngineImpl();
+		new Car(fakeSut).stop();
 
-		new Car(fakeEngine).stop();
-
-		assertThat(((FakeEngineImpl) fakeEngine).isRunning(), is(false));
+		assertThat(((FakeEngineImpl) fakeSut).isRunning(), is(false));
 	}
 }

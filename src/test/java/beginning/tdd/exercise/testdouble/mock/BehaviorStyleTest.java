@@ -1,4 +1,4 @@
-package beginning.tdd.exercise.mockito;
+package beginning.tdd.exercise.testdouble.mock;
 
 import static org.mockito.BDDMockito.*;
 import static org.mockito.Mockito.*;

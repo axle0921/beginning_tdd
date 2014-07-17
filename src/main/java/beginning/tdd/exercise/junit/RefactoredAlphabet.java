@@ -43,7 +43,7 @@ public class RefactoredAlphabet {
 		toValidateArgument(input);
 		String deduplicatedAlphabet = toSortByDeduplication(input);
 
-		char[] letters = deduplicatedAlphabet.toLowerCase().toCharArray();
+		char[] letters = deduplicatedAlphabet.toCharArray();
 		int score = 0;
 
 		for (char ch : letters) {

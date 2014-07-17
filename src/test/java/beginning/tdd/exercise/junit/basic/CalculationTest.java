@@ -7,8 +7,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import beginning.tdd.exercise.junit.basic.Calculation;
-
 @RunWith(JUnit4.class)
 public class CalculationTest {
 	@Test
