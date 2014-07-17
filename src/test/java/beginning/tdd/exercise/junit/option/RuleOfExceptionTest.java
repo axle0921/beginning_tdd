@@ -1,4 +1,4 @@
-package beginning.tdd.exercise.junit;
+package beginning.tdd.exercise.junit.option;
 
 import org.junit.Rule;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package beginning.tdd.exercise.junit;
+package beginning.tdd.exercise.junit.option;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;

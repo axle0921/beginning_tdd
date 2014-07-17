@@ -1,4 +1,4 @@
-package beginning.tdd.exercise.junit;
+package beginning.tdd.exercise.junit.basic;
 
 import static org.junit.Assert.*;
 
@@ -9,6 +9,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class JunitCycleTest {
@@ -49,5 +50,10 @@ public class JunitCycleTest {
 		collection.add("itemA");
 		assertEquals(1, collection.size());
 		System.out.println("@Test - testOneItemCollection");
+	}
+
+	@Ignore
+	public void testIgnore() {
+		System.out.println("@Ignore - testIgnore");
 	}
 }
