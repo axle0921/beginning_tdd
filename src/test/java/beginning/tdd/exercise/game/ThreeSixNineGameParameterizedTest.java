@@ -31,8 +31,6 @@ public class ThreeSixNineGameParameterizedTest {
 	@Test
 	public void test() {
 		String actual = ThreeSixNineGame.call(number);
-		System.out.println("number = " + number + ", result = " + expected
-				+ ", actual = " + actual);
 		assertEquals(expected, actual);
 	}
 
