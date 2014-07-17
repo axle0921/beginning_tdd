@@ -34,3 +34,4 @@ Hamcrest 실습을 다음의 순서로 하오니 참고하여 진행 바랍니�
 
 5. Test Double 연습문제
 1) 뉴스 시각 노출
+- ArticleServiceTimeTest
