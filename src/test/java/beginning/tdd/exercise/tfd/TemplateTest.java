@@ -1,11 +1,11 @@
-package beginning.tdd.exercise;
+package beginning.tdd.exercise.tfd;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import beginning.tdd.exercise.Template;
+import beginning.tdd.exercise.tfd.Template;
 
 public class TemplateTest {
 	private Template sut;
