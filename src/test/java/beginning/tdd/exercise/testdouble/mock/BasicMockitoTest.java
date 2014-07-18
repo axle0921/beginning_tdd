@@ -161,7 +161,7 @@ public class BasicMockitoTest {
 	}
 
 	@Test
-	public void testVerifingZearoInteraction() {
+	public void testVerifingZeroInteraction() {
 		// using mocks - only mockOne is interacted
 		mockedList.add("one");
 
