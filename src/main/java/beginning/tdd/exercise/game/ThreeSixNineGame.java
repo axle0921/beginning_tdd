@@ -1,36 +1,42 @@
 package beginning.tdd.exercise.game;
 
+
 public class ThreeSixNineGame {
+	private final String BING_GO = "짝";
 
-	public static final String BING_GO = "짝";
+	public String call(int number) {
+		validNumber(number);
 
-	public static String call(int number) {
+		int binggoCount = 0;
 
-		if (number > Integer.MAX_VALUE) {
-			throw new RuntimeException(number + " is not permitted.");
-		}
+		char[] digits = String.valueOf(number).toCharArray();
 
-		if (number < 1) {
-			throw new RuntimeException(number + " is not permitted.");
-		}
-
-		int correctNumber = 0;
-		char[] chars = String.valueOf(number).toCharArray();
-		for (char c : chars) {
-			if (c == '3' || c == '6' || c == '9') {
-				correctNumber++;
+		for (char each : digits) {
+			if (each == '3' || each == '6' || each == '9') {
+				binggoCount++;
 			}
 		}
 
-		if (correctNumber < 1) {
+		if (binggoCount < 1) {
 			return String.valueOf(number);
 		}
 
-		StringBuffer correctBuffer = new StringBuffer();
-		for (int i = 0; i < correctNumber; i++) {
-			correctBuffer.append(BING_GO);
+		StringBuilder result = new StringBuilder();
+
+		for (int i = 0; i < binggoCount; i++) {
+			result.append(BING_GO);
 		}
 
-		return correctBuffer.toString();
+		return result.toString();
+	}
+
+	private void validNumber(int number) {
+		if (number > Integer.MAX_VALUE) {
+			throw new RuntimeException(number + "is not permitted.");
+		}
+
+		if (number < 1) {
+			throw new RuntimeException(number + "is not permitted.");
+		}
 	}
 }
