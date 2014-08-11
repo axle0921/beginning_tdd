@@ -31,7 +31,8 @@ public class ThreeSixNineGameParameterizedTest {
 
 	@Parameters
 	public static Collection<Object[]> data() {
-		return Arrays.asList(new Object[][] { { 1, "1" }, { 3, "짝" } });
+		return Arrays.asList(new Object[][] { { 1, "1" }, { 3, "짝" }, { 369, "짝짝짝" }, { 36936943, "짝짝짝짝짝짝짝" },
+				{ 1245721, "1245721" }, { 3999, "짝짝짝짝" } });
 	}
 
 	@Test
