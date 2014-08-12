@@ -13,7 +13,7 @@ public class RefactoredAlphabet {
 	}
 
 	String toSortByDeduplication(String input) {
-		char[] letters = input.toLowerCase().toCharArray();
+		char[] letters = toCaseInsensitive(input);
 		TreeSet<Character> sortedAlphabet = new TreeSet<Character>();
 
 		for (char alphabet : letters) {
@@ -28,6 +28,10 @@ public class RefactoredAlphabet {
 		}
 
 		return result.toString();
+	}
+
+	private char[] toCaseInsensitive(String input) {
+		return input.toLowerCase().toCharArray();
 	}
 
 	void toValidateArgument(String input) {
