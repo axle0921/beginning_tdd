@@ -1,10 +1,9 @@
-package beginning.tdd.exercise.mybatis;
+package beginning.tdd.exercise.mvc.model;
 
 public class Person {
-
-	Long id;
-	String name;
-	Integer age;
+	private Long id;
+	private String name;
+	private Integer age;
 
 	public Long getId() {
 		return id;
@@ -34,5 +33,4 @@ public class Person {
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", age=" + age + "]";
 	}
-
 }

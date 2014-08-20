@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="beginning.tdd.exercise.mybatis.PersonRepository">
-    <select id="findByAgeBetween" resultType="Person">
-        SELECT
-          id, name, age
-        FROM
-          person
-        WHERE
-          age between #{greaterEquals} and #{lesserThan}
+<mapper namespace="beginning.tdd.exercise.mvc.repository.AddressRepository">
+    <select id="findBy" resultType="Person">
+        SELECT id, name, age
+        FROM person
     </select>
 
-    <insert id="save">
-        INSERT INTO person
-          (name, age)
-        VALUES
-          (#{name}, #{age})
+    <insert id="add">
+        INSERT INTO person (name, age)
+        VALUES (#{name}, #{age})
+        <selectKey keyProperty="id" resultType="java.lang.Long" order="AFTER">
+			CALL IDENTITY()
+		</selectKey>
     </insert>
 
+	<delete id="remove">
+		DELETE FROM person WHERE id = #{id}
+	</delete>
 </mapper>

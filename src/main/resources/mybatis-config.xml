@@ -4,6 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="beginning.tdd.exercise.mybatis.Person" alias="Person"/>
+        <typeAlias type="beginning.tdd.exercise.mvc.model.Person" alias="Person"/>
     </typeAliases>
 </configuration>

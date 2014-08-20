@@ -7,7 +7,7 @@ public class FakeUserRepositoryImpl implements UserRepository {
 	private Collection<User> users = new ArrayList<User>();
 
 	@Override
-	public void save(User user) {
+	public void add(User user) {
 		if (findById(user.getId()) == null) {
 			users.add(user);
 		}

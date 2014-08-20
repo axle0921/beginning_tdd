@@ -1,7 +1,7 @@
 package beginning.tdd.exercise.testdouble;
 
 public interface UserRepository {
-	void save(User user);
+	void add(User user);
 
 	User findById(long id);
 

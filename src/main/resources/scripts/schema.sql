@@ -5,3 +5,9 @@ create table person (
         primary key(id),
         unique (name)
 );
+
+INSERT INTO person (name, age) VALUES ('배철수', 5);
+INSERT INTO person (name, age) VALUES ('김구라', 11);
+INSERT INTO person (name, age) VALUES ('홍길동', 21);
+INSERT INTO person (name, age) VALUES ('김철수', 31);
+INSERT INTO person (name, age) VALUES ('김태희', 41);
