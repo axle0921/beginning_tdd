@@ -22,7 +22,7 @@ public class AddressRepositoryTest extends AbstractDBIntegrationTest {
 		// when
 		long insertRowCount = sut.add(person);
 		long lastIndex = person.getId();
-		int existedCount = simpleJdbcTemplate.queryForInt("SELECT COUNT(*) FROM person WHERE id = ?", lastIndex);
+		int existedCount = jdbcTemplate.queryForInt("SELECT COUNT(*) FROM person WHERE id = ?", lastIndex);
 
 		// then
 		assertThat(insertRowCount, is(1L));
@@ -33,7 +33,7 @@ public class AddressRepositoryTest extends AbstractDBIntegrationTest {
 	public void testFindBy() {
 		// given
 		Person person = createPersonFixture();
-		simpleJdbcTemplate.update("INSERT INTO person (name, age) VALUES (?, ?)", person.getName(), person.getAge());
+		jdbcTemplate.update("INSERT INTO person (name, age) VALUES (?, ?)", person.getName(), person.getAge());
 
 		// when
 		List<Person> addresses = sut.findBy();
@@ -46,12 +46,12 @@ public class AddressRepositoryTest extends AbstractDBIntegrationTest {
 	public void testRemove() {
 		// given
 		Person person = createPersonFixture();
-		simpleJdbcTemplate.update("INSERT INTO person (name, age) VALUES (?, ?)", person.getName(), person.getAge());
-		long lastIndex = simpleJdbcTemplate.queryForLong("CALL IDENTITY()");
+		jdbcTemplate.update("INSERT INTO person (name, age) VALUES (?, ?)", person.getName(), person.getAge());
+		long lastIndex = jdbcTemplate.queryForLong("CALL IDENTITY()");
 
 		// when
 		sut.remove(lastIndex);
-		int existedCount = simpleJdbcTemplate.queryForInt("SELECT COUNT(*) FROM person WHERE id = ?", lastIndex);
+		int existedCount = jdbcTemplate.queryForInt("SELECT COUNT(*) FROM person WHERE id = ?", lastIndex);
 
 		// then
 		assertThat(existedCount, is(0));
