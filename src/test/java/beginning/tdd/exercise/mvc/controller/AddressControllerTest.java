@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -17,6 +16,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
 import org.springframework.web.servlet.ModelAndView;
 
+import beginning.tdd.exercise.mvc.AddressFixture;
 import beginning.tdd.exercise.mvc.model.Person;
 import beginning.tdd.exercise.mvc.repository.AddressRepository;
 
@@ -32,7 +32,7 @@ public class AddressControllerTest {
 		// given
 		String someName = "아이유";
 		Integer someAge = 21;
-		List<Person> expectedAddress = createFakeAddress(someName, someAge);
+		List<Person> expectedAddress = AddressFixture.createFakeAddress(someName, someAge);
 		when(mockAddressRepository.findBy()).thenReturn(expectedAddress);
 
 		// when
@@ -49,13 +49,13 @@ public class AddressControllerTest {
 		// given
 		String someName = "아이유";
 		Integer someAge = 21;
-		Person somePerson = createFakePerson(someName, someAge);
+		Person somePerson = AddressFixture.createFakePerson(someName, someAge);
 		when(mockAddressRepository.add(somePerson)).thenReturn(anyLong());
 		String expectedResult = "redirect:list";
 
 		// when
 		sut = new AddressController(mockAddressRepository);
-		String actualResult = sut.add(someName, someAge);
+		String actualResult = sut.add(somePerson);
 
 		// then
 		assertThat(actualResult, is(expectedResult));
@@ -82,22 +82,6 @@ public class AddressControllerTest {
 
 		// then
 		assertThat(actualResult, is(expectedResult));
-	}
-
-	private Person createFakePerson(String name, Integer age) {
-		Person somePerson = new Person();
-		somePerson.setId(100L);
-		somePerson.setName(name);
-		somePerson.setAge(age);
-
-		return somePerson;
-	}
-
-	private List<Person> createFakeAddress(String name, Integer age) {
-		List<Person> somePersons = new ArrayList<Person>();
-		somePersons.add(createFakePerson(name, age));
-
-		return somePersons;
 	}
 
 	private Object getObject(ModelAndView result, String key) {

@@ -8,6 +8,7 @@ import java.util.List;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import beginning.tdd.exercise.mvc.AddressFixture;
 import beginning.tdd.exercise.mvc.model.Person;
 
 public class AddressRepositoryTest extends AbstractDBIntegrationTest {
@@ -17,7 +18,9 @@ public class AddressRepositoryTest extends AbstractDBIntegrationTest {
 	@Test
 	public void testAdd() {
 		// given
-		Person person = createPersonFixture();
+		String someName = "아이유";
+		Integer someAge = 22;
+		Person person = AddressFixture.createFakePerson(someName, someAge);
 
 		// when
 		long insertRowCount = sut.add(person);
@@ -32,8 +35,9 @@ public class AddressRepositoryTest extends AbstractDBIntegrationTest {
 	@Test
 	public void testFindBy() {
 		// given
-		Person person = createPersonFixture();
-		jdbcTemplate.update("INSERT INTO person (name, age) VALUES (?, ?)", person.getName(), person.getAge());
+		String someName = "아이유";
+		Integer someAge = 22;
+		jdbcTemplate.update("INSERT INTO person (name, age) VALUES (?, ?)", someName, someAge);
 
 		// when
 		List<Person> addresses = sut.findBy();
@@ -45,8 +49,9 @@ public class AddressRepositoryTest extends AbstractDBIntegrationTest {
 	@Test
 	public void testRemove() {
 		// given
-		Person person = createPersonFixture();
-		jdbcTemplate.update("INSERT INTO person (name, age) VALUES (?, ?)", person.getName(), person.getAge());
+		String someName = "아이유";
+		Integer someAge = 22;
+		jdbcTemplate.update("INSERT INTO person (name, age) VALUES (?, ?)", someName, someAge);
 		long lastIndex = jdbcTemplate.queryForLong("CALL IDENTITY()");
 
 		// when
@@ -55,12 +60,5 @@ public class AddressRepositoryTest extends AbstractDBIntegrationTest {
 
 		// then
 		assertThat(existedCount, is(0));
-	}
-
-	private Person createPersonFixture() {
-		Person person = new Person();
-		person.setName("아이유");
-		person.setAge(22);
-		return person;
 	}
 }

@@ -2,6 +2,7 @@ package beginning.tdd.exercise.mvc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,11 +31,7 @@ public class AddressController {
 	}
 
 	@RequestMapping(value = "/add", method = { RequestMethod.POST })
-	public String add(@RequestParam String name, @RequestParam Integer age) {
-		Person person = new Person();
-		person.setName(name);
-		person.setAge(age);
-
+	public String add(@ModelAttribute Person person) {
 		addressRepository.add(person);
 
 		return REDIRECT_LIST_PAGE;
@@ -42,6 +39,7 @@ public class AddressController {
 
 	@RequestMapping(value = "/remove", method = { RequestMethod.POST })
 	public String remove(@RequestParam Long id) {
+		System.out.println(">>> id >>> " + id);
 		addressRepository.remove(id);
 
 		return REDIRECT_LIST_PAGE;
