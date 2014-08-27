@@ -1,4 +1,4 @@
-package beginning.tdd.sample.game;
+package beginning.tdd.sample.junit.game;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
@@ -11,6 +11,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+
+import beginning.tdd.sample.junit.game.ThreeSixNineGame;
 
 @RunWith(Parameterized.class)
 public class ThreeSixNineGameParameterizedTest {

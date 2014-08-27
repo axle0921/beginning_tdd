@@ -1,9 +1,11 @@
-package beginning.tdd.sample.game;
+package beginning.tdd.sample.junit.game;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import beginning.tdd.sample.junit.game.ThreeSixNineGame;
 
 public class ThreeSixNineGameJunitTest {
 	private ThreeSixNineGame sut;

@@ -1,6 +1,6 @@
-# 구현체 : src/main/java/beginning/tdd/exercise/game/ThreeSixNineGame.java
+# 구현체 : ThreeSixNineGame.java
 
-# 테스트
+# 테스트 (src/test/java/beginning/tdd/exercise/junit/game/)
 1. ThreeSixNineGameJunitTest.java
 - JUnit Assertion
 

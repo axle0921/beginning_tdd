@@ -1,4 +1,4 @@
-package beginning.tdd.sample.game;
+package beginning.tdd.sample.junit.game;
 
 
 public class ThreeSixNineGame {
