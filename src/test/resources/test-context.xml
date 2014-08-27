@@ -25,7 +25,7 @@
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="beginning.tdd.exercise"/>
+        <property name="basePackage" value="beginning.tdd"/>
         <property name="annotationClass" value="org.springframework.stereotype.Repository"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
@@ -33,6 +33,6 @@
 	<jdbc:embedded-database id="dataSource" type="HSQL">
 		<jdbc:script execution="INIT" location="classpath:scripts/schema.sql" />
 	</jdbc:embedded-database>
-	<mybatis-spring:scan base-package="beginning.tdd.exercise" />
+	<mybatis-spring:scan base-package="beginning.tdd" />
 	
 </beans>

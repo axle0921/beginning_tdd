@@ -1,8 +1,5 @@
 package beginning.tdd.exercise.tfd;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
 
 /**
  * <pre>
@@ -16,74 +13,5 @@ import org.junit.Test;
  * </pre>
  */
 public class VendingMachineTest {
-	VendingMachine sut = new VendingMachine();
 
-	@Test
-	public void testInputMoney() {
-		sut.inputMoney(2000);
-		assertEquals(2000, sut.showMoney());
-	}
-
-	@Test
-	public void testChoiceProduct() {
-		sut.inputMoney(2000);
-		sut.choiceProduct(650);
-		assertEquals(1350, sut.showMoney());
-	}
-
-	@Test
-	public void test잔액중1000원짜리가있으면먼저반환() {
-		sut.inputMoney(3000);
-		sut.choiceProduct(650);
-		assertEquals(2, sut.returnPaper());
-		assertEquals(350, sut.showMoney());
-	}
-
-	@Test
-	public void test잔액이500원보다큰경우반환() {
-		sut.inputMoney(1000);
-		sut.choiceProduct(350);
-
-		assertEquals(0, sut.returnPaper());
-		assertEquals(1, sut.return500());
-		assertEquals(1, sut.return100());
-		assertEquals(1, sut.return50());
-	}
-
-	@Test
-	public void test잔액이100원보다큰경우반환() {
-		sut.inputMoney(1000);
-		sut.choiceProduct(750);
-
-		assertEquals(0, sut.return500());
-		assertEquals(2, sut.return100());
-	}
-
-	@Test
-	public void test잔액이50원보다큰경우반환() {
-		sut.inputMoney(1000);
-		sut.choiceProduct(950);
-		assertEquals(0, sut.return100());
-		assertEquals(1, sut.return50());
-	}
-
-	@Test
-	public void test잔액에따른반환() {
-		sut.inputMoney(2000);
-		sut.choiceProduct(350);
-		sut.calculate();
-
-		assertEquals("지폐의 갯수 : ", 1, sut.returnPaper());
-		assertEquals("500원 동전 갯수 : ", 1, sut.return500());
-		assertEquals("100원 동전 갯수 : ", 1, sut.return100());
-		assertEquals("50원 동전 갯수 : ", 1, sut.return50());
-	}
-
-	@Test
-	public void testPrintMoney() {
-		sut.inputMoney(2000);
-		sut.choiceProduct(1300);
-		sut.calculate();
-		sut.returnMoney();
-	}
 }
