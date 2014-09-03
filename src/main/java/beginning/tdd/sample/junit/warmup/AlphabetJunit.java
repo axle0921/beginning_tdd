@@ -10,13 +10,13 @@ import org.apache.commons.lang.StringUtils;
 public class AlphabetJunit {
 	public String sortBy(String input) {
 		toValidateArgument(input);
-		String lowerAlphabet = toLowerCase(input);
-		String deduplicatedAlphabet = toRemoveDuplication(lowerAlphabet);
+		String caseInsensitiveAlphabet = toCaseInsensitive(input);
+		String deduplicatedAlphabet = toRemoveDuplication(caseInsensitiveAlphabet);
 
 		return toSort(deduplicatedAlphabet);
 	}
 
-	public String toLowerCase(String input) {
+	public String toCaseInsensitive(String input) {
 		return StringUtils.lowerCase(input);
 	}
 
@@ -64,8 +64,8 @@ public class AlphabetJunit {
 	 */
 	public int calculateBy(String input) {
 		toValidateArgument(input);
-		String lowerAlphabet = toLowerCase(input);
-		String deduplicatedAlphabet = toRemoveDuplication(lowerAlphabet);
+		String caseInsensitiveAlphabet = toCaseInsensitive(input);
+		String deduplicatedAlphabet = toRemoveDuplication(caseInsensitiveAlphabet);
 
 		char[] letters = deduplicatedAlphabet.toCharArray();
 		int score = 0;

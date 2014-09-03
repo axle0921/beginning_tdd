@@ -4,8 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import beginning.tdd.sample.junit.warmup.AlphabetJunit;
-
 public class AlphabetJunitTest {
 	private AlphabetJunit sut;
 
@@ -21,12 +19,12 @@ public class AlphabetJunitTest {
 	}
 
 	@Test
-	public void 알파벳을_모두_소문자_처리한다() {
+	public void 알파벳을_대소문자_구분하지_않도록_소문자처리_한다() {
 		String someAlphabet = "aBcDeFg";
 		String expectedResult = "abcdefg";
 		sut = new AlphabetJunit();
 
-		String actualResult = sut.toLowerCase(someAlphabet);
+		String actualResult = sut.toCaseInsensitive(someAlphabet);
 
 		assertEquals(expectedResult, actualResult);
 	}
