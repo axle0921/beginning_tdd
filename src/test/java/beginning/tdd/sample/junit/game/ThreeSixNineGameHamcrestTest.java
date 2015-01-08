@@ -1,12 +1,11 @@
 package beginning.tdd.sample.junit.game;
 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import beginning.tdd.sample.junit.game.ThreeSixNineGame;
 
 public class ThreeSixNineGameHamcrestTest {
 	private ThreeSixNineGame sut;

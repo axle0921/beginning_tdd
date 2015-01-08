@@ -1,6 +1,5 @@
 package beginning.tdd.sample.testdouble;
 
-
 /**
  * Fake Object - 시나리오별 Test Stub을 구성해야 할 경우 시나리오별 Fake Object를 통한 테스트 구성.
  */

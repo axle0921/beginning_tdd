@@ -1,6 +1,6 @@
 package beginning.tdd.exercise.testdouble.news;
 
-import static org.apache.commons.lang.time.DateUtils.*;
+import static org.apache.commons.lang.time.DateUtils.isSameDay;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

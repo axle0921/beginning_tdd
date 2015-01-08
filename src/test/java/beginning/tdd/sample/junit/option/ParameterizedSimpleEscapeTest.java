@@ -1,6 +1,6 @@
 package beginning.tdd.sample.junit.option;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -48,7 +48,6 @@ public class ParameterizedSimpleEscapeTest {
 	@Parameters
 	public static Collection<String[]> getTestData() {
 		return Arrays.asList(new String[][] { { "&quot;", "\"" }, { "&lt;", "<" }, { "&gt;", ">" }, { "&amp;", "&" },
-				{ "&quot;&lt;&gt;&amp;", "\"<>&" },
-				{ "&quot;String&lt;String&gt;String&amp;String", "\"String<String>String&String" }, { "", "" } });
+				{ "&quot;&lt;&gt;&amp;", "\"<>&" }, { "&quot;String&lt;String&gt;String&amp;String", "\"String<String>String&String" }, { "", "" } });
 	}
 }

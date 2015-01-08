@@ -1,7 +1,7 @@
 package beginning.tdd.sample.hamcrest;
 
 import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;

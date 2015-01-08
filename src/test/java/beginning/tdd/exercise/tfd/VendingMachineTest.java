@@ -1,6 +1,5 @@
 package beginning.tdd.exercise.tfd;
 
-
 /**
  * <pre>
  * 500, 100, 50원 동전만 사용하고 동전은 최소 개수로 반환한다. (음료수는 한번에 하나만 구매 가능하다.)

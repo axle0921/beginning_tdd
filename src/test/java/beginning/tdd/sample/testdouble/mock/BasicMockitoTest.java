@@ -1,6 +1,6 @@
 package beginning.tdd.sample.testdouble.mock;
 
-import static org.mockito.Matchers.*;
+import static org.mockito.Matchers.anyInt;
 import static org.mockito.Mockito.*;
 
 import java.util.LinkedList;

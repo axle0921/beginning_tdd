@@ -1,9 +1,10 @@
 package beginning.tdd.sample.hamcrest.custom;
 
-import static beginning.tdd.sample.hamcrest.custom.AreEvenNumbers.*;
-import static beginning.tdd.sample.hamcrest.custom.IsNotANumber.*;
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
+import static beginning.tdd.sample.hamcrest.custom.AreEvenNumbers.evenNumbers;
+import static beginning.tdd.sample.hamcrest.custom.IsNotANumber.notANumber;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.junit.Assert.assertThat;
 
 import java.util.Arrays;
 import java.util.List;

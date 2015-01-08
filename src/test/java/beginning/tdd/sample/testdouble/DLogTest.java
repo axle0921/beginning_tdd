@@ -1,6 +1,6 @@
 package beginning.tdd.sample.testdouble;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.util.logging.Level;
 

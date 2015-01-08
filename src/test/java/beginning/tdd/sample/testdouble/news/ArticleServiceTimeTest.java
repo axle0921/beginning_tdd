@@ -1,7 +1,8 @@
 package beginning.tdd.sample.testdouble.news;
 
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 import java.util.Calendar;
 import java.util.Date;

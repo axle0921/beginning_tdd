@@ -1,6 +1,6 @@
 package beginning.tdd.sample.testdouble.mock;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
 
 import java.util.List;
 

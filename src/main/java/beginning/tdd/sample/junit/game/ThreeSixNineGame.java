@@ -1,6 +1,5 @@
 package beginning.tdd.sample.junit.game;
 
-
 public class ThreeSixNineGame {
 	private final String BING_GO = "짝";
 

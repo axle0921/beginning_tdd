@@ -1,8 +1,8 @@
 package beginning.tdd.sample.junit.option;
 
 import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
-import static org.junit.Assume.*;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assume.assumeThat;
 
 import org.junit.experimental.theories.DataPoint;
 import org.junit.experimental.theories.Theories;

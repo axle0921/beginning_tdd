@@ -1,7 +1,7 @@
 package beginning.tdd.sample.junit.game;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -11,8 +11,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-
-import beginning.tdd.sample.junit.game.ThreeSixNineGame;
 
 @RunWith(Parameterized.class)
 public class ThreeSixNineGameParameterizedTest {
@@ -33,8 +31,8 @@ public class ThreeSixNineGameParameterizedTest {
 
 	@Parameters
 	public static Collection<Object[]> data() {
-		return Arrays.asList(new Object[][] { { 1, "1" }, { 3, "짝" }, { 369, "짝짝짝" }, { 36936943, "짝짝짝짝짝짝짝" },
-				{ 1245721, "1245721" }, { 3999, "짝짝짝짝" } });
+		return Arrays.asList(new Object[][] { { 1, "1" }, { 3, "짝" }, { 369, "짝짝짝" }, { 36936943, "짝짝짝짝짝짝짝" }, { 1245721, "1245721" },
+				{ 3999, "짝짝짝짝" } });
 	}
 
 	@Test

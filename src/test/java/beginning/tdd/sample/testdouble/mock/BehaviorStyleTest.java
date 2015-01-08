@@ -1,7 +1,6 @@
 package beginning.tdd.sample.testdouble.mock;
 
 import static org.mockito.BDDMockito.*;
-import static org.mockito.Mockito.*;
 
 import java.util.LinkedList;
 

@@ -1,6 +1,6 @@
 package beginning.tdd.sample.junit.basic;
 
-import static org.junit.Assume.*;
+import static org.junit.Assume.assumeTrue;
 
 import org.junit.Before;
 import org.junit.Test;

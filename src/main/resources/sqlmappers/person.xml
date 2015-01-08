@@ -11,11 +11,11 @@
         INSERT INTO person (name, age)
         VALUES (#{name}, #{age})
         <selectKey keyProperty="id" resultType="java.lang.Long" order="AFTER">
-			CALL IDENTITY()
-		</selectKey>
+            CALL IDENTITY()
+        </selectKey>
     </insert>
 
-	<delete id="remove">
-		DELETE FROM person WHERE id = #{id}
-	</delete>
+    <delete id="remove">
+        DELETE FROM person WHERE id = #{id}
+    </delete>
 </mapper>

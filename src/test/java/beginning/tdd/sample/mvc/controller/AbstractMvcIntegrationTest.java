@@ -12,8 +12,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(locations = { "classpath:test-context.xml",
-		"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" })
+@ContextConfiguration(locations = { "classpath:test-context.xml", "file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" })
 public class AbstractMvcIntegrationTest {
 	@Autowired
 	protected WebApplicationContext wac;
