@@ -229,7 +229,7 @@
     </dependencies>
     <build>
         <finalName>beginning_tdd</finalName>
-
+`
         <plugins>
             <!-- maven-eclipse-plugin -->
             <plugin>
@@ -280,6 +280,18 @@
                 <version>1.2.1</version>
                 <configuration>
                     <mainClass>org.test.int1.Main</mainClass>
+                </configuration>
+            </plugin>
+
+            <!-- unit-test-plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <excludes>
+                        <exclude>**/Abstract*Test.java</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
 
