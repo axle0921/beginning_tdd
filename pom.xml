@@ -229,7 +229,7 @@
     </dependencies>
     <build>
         <finalName>beginning_tdd</finalName>
-`
+
         <plugins>
             <!-- maven-eclipse-plugin -->
             <plugin>
