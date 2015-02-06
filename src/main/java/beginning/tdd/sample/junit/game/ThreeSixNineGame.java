@@ -1,7 +1,7 @@
 package beginning.tdd.sample.junit.game;
 
 public class ThreeSixNineGame {
-	private final String BING_GO = "짝";
+	private static final String BING_GO = "짝";
 
 	public String call(int number) {
 		validNumber(number);
