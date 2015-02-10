@@ -398,6 +398,12 @@
         <outputDirectory>target/site</outputDirectory>
         -->
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+
             <!-- Check Style -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
