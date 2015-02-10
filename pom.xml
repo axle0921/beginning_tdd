@@ -368,6 +368,13 @@
                     <formats>
                         <format>xml</format>
                     </formats>
+                    <!--
+                    <instrumentation>
+                        <excludes>
+                            <exclude>**/*Test.class</exclude>
+                        </excludes>
+                    </instrumentation>
+                    -->
                 </configuration>
                 <executions>
                     <execution>
@@ -380,5 +387,28 @@
             </plugin>
 
         </plugins>
+
     </build>
+
+
+    <reporting>
+        <outputDirectory>target/site</outputDirectory>
+        <plugins>
+            <!-- CPD Reporting -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <linkXRef>true</linkXRef>
+                    <sourceEncoding>UTF-8</sourceEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <targetJdk>1.7</targetJdk>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </reporting>
+
+
 </project>
