@@ -394,7 +394,9 @@
 
 
     <reporting>
+        <!--
         <outputDirectory>target/site</outputDirectory>
+        -->
         <plugins>
             <!-- Check Style -->
             <plugin>
@@ -406,7 +408,7 @@
                     <!--
                     <configLocation>${basedir}/src/test/resources/rulesets/checkstyle_ruleset.xml</configLocation>
                     -->
-                    <configLocation>checkstyle.xml</configLocation>
+                    <configLocation>/Users/axle/Dev/QP/cafe_java_code_checkstyle_v1.0.xml</configLocation>
                 </configuration>
             </plugin>
 
