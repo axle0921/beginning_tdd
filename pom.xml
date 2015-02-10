@@ -398,11 +398,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.13</version>
+                <version>2.14</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <configLocation>${basedir}/src/test/resources/rulesets/checkstyle_ruleset.xml</configLocation>
-                    <includes>beginning/tdd/**/**/*.java</includes>
                 </configuration>
             </plugin>
 
