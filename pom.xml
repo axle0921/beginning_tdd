@@ -342,7 +342,6 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.2.201409121644</version>
-                <!--
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>
@@ -358,24 +357,23 @@
                         </goals>
                     </execution>
                 </executions>
-                -->
+            </plugin>
 
+            <!-- test-coverage-cobertura -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.6</version>
                 <configuration>
-                    <destfile>${basedir}/target/coverage-reports/jacoco-unit.exec</destfile>
-                    <datafile>${basedir}/target/coverage-reports/jacoco-unit.exec</datafile>
+                    <formats>
+                        <format>xml</format>
+                    </formats>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>jacoco-initialize</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>jacoco-site</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>report</goal>
+                            <goal>cobertura</goal>
                         </goals>
                     </execution>
                 </executions>
