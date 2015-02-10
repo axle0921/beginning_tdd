@@ -394,6 +394,17 @@
     <reporting>
         <outputDirectory>target/site</outputDirectory>
         <plugins>
+            <!-- Check Style -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.13</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <configLocation>${basedir}/src/test/resources/rulesets/checkstyle_ruleset.xml</configLocation>
+                </configuration>
+            </plugin>
+
             <!-- CPD Reporting -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
