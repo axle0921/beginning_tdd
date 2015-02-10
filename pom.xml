@@ -402,6 +402,7 @@
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <configLocation>${basedir}/src/test/resources/rulesets/checkstyle_ruleset.xml</configLocation>
+                    <includes>beginning/tdd/**/**/*.java</includes>
                 </configuration>
             </plugin>
 
