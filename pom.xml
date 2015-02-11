@@ -373,13 +373,18 @@
                     <formats>
                         <format>xml</format>
                     </formats>
-                    <!--
                     <instrumentation>
                         <excludes>
-                            <exclude>**/*Test.class</exclude>
+                            <!-- test infrastructure -->
+                            <exclude>**/Abstract*Test.java</exclude>
+                            <!-- 실습을 위한 의도된 실패 테스트 케이스 -->
+                            <exclude>**/HamcrestExampleTest.java</exclude>
+                            <exclude>**/CustomMatcherTest.java</exclude>
+                            <exclude>**/AddressControllerIntegrationTest.java</exclude>
+                            <exclude>**/HomeControllerIntegrationTest.java</exclude>
+                            <exclude>**/BasicMockitoTest.java</exclude>
                         </excludes>
                     </instrumentation>
-                    -->
                 </configuration>
 <!--
                 <executions>
