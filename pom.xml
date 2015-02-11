@@ -472,9 +472,9 @@
                     <xmlOutput>true</xmlOutput>
                     <includeFilterFile>${basedir}/src/test/resources/rulesets/findbugs_include.xml</includeFilterFile>
                     <excludeFilterFile>${basedir}/src/test/resources/rulesets/findbugs_exclude.xml</excludeFilterFile>
-                    <!--
-                    <classFilesDirectory>target/classes/com</classFilesDirectory>
-                    -->
+
+                    <classFilesDirectory>target/classes/beginning</classFilesDirectory>
+
                 </configuration>
             </plugin>
 
