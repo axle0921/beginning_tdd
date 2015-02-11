@@ -395,7 +395,7 @@
                 <version>2.14</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
-                    <configLocation>checkstyle.xml</configLocation>
+                    <configLocation>${basedir}/src/test/resources/rulesets/checkstyle.xml</configLocation>
                 </configuration>
             </plugin>
 
@@ -416,17 +416,15 @@
             </plugin>
 
             <!-- Check Style -->
-
-
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-checkstyle-plugin</artifactId>
-                    <version>2.14</version>
-                    <configuration>
-                        <encoding>UTF-8</encoding>
-                        <configLocation>checkstyle.xml</configLocation>
-                    </configuration>
-                </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.14</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <configLocation>${basedir}/src/test/resources/rulesets/checkstyle.xml</configLocation>
+                </configuration>
+            </plugin>
 
 
             <!-- CPD Reporting -->
