@@ -378,6 +378,7 @@
                     </instrumentation>
                     -->
                 </configuration>
+<!--
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -386,6 +387,7 @@
                         </goals>
                     </execution>
                 </executions>
+-->
             </plugin>
 
             <!-- checkstyle-plugin -->
