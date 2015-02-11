@@ -399,6 +399,13 @@
                 </configuration>
             </plugin>
 
+            <!-- jdepend-plugin -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jdepend-maven-plugin</artifactId>
+                <version>2.0</version>
+            </plugin>
+
         </plugins>
 
     </build>
@@ -438,6 +445,13 @@
                     <minimumTokens>100</minimumTokens>
                     <targetJdk>1.7</targetJdk>
                 </configuration>
+            </plugin>
+
+            <!-- jdepend -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jdepend-maven-plugin</artifactId>
+                <version>2.0</version>
             </plugin>
 
         </plugins>
