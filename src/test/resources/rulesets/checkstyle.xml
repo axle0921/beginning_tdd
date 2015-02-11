@@ -1,23 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE module PUBLIC
         "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
         "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 
-<!--
-    Checkstyle configurartion that checks the Cafe coding conventions from:
-
-    http://wiki.daumkakao.com/display/CommunityDev1/Java+Code+Convention
- -->
 <module name = "Checker">
     <property name="charset" value="UTF-8"/>
     <property name="severity" value="warning"/>
 
     <module name="TreeWalker">
         <!-- // 클래스 주석은 개발자의 이름을 반드시 포함한다.
-                <module name="JavadocType">
-                    <property name="authorFormat" value=".+"/>
-                </module>
-        -->
+         <module name="JavadocType">
+         <property name="authorFormat" value=".+"/>
+         </module>
+         -->
 
         <module name="JavadocStyle">
             <property name="scope" value="anoninner"/>
@@ -25,62 +20,65 @@
         </module>
 
         <module name="ConstantName">
-            <property name="format" value="^[A-Z][A-Z0-9]+(_[A-Z0-9]+)*$"/>
+            <property name="format" value="^[A-Z][A-Z0-9]+(_[A-Z0-9]+)*$"/> <!-- 상수 이름은 대문자로 작성하며, 복합어는 언더스코어('_')를 사용하여 단어를 구분한다. -->
             <message key="name.invalidPattern" value="Constant name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="LocalFinalVariableName">
-            <property name="format" value="^([a-z][a-zA-Z0-9]+|_callback)$"/>
+            <property name="format" value="^([a-z][a-zA-Z0-9]+|_callback)$"/> <!-- 변수 이름은 카멜 표기법을 준수한다. -->
             <message key="name.invalidPattern" value="Local Final Variable name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <!--
-                <module name="LocalVariableName">
-                    <property name="format" value="^([a-z][a-zA-Z0-9]+|_callback)$"/>
-                    <message key="name.invalidPattern" value="Local Variable name ''{0}'' must match pattern ''{1}''."/>
-                </module>
-        -->
+         <module name="LocalVariableName">
+         <property name="format" value="^([a-z][a-zA-Z0-9]+|_callback)$"/>
+         <message key="name.invalidPattern" value="Local Variable name ''{0}'' must match pattern ''{1}''."/>
+         </module>
+         -->
         <module name="LocalVariableName">
             <property name="tokens" value="VARIABLE_DEF"/>
-            <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
+            <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/> <!-- 변수 이름은 카멜 표기법을 준수한다. -->
             <property name="allowOneCharVarInForLoop" value="true"/>
             <message key="name.invalidPattern" value="Local variable name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="MemberName">
-            <property name="format" value="^([a-z][a-zA-Z0-9]+|_callback)$"/>
+            <property name="format" value="^([a-z][a-zA-Z0-9]+|_callback)$"/> <!-- 변수 이름은 카멜 표기법을 준수한다. -->
             <message key="name.invalidPattern" value="Member name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="MethodName">
-            <property name="format" value="^([a-z][a-zA-Z0-9]+|get_callback|set_callback)$"/>
+            <property name="format" value="^([a-z][a-zA-Z0-9]+|get_callback|set_callback)$"/> <!-- 메소드는 카멜 표기법을 준수한다. -->
             <message key="name.invalidPattern" value="Method name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="PackageName">
             <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
             <message key="name.invalidPattern" value="Package name ''{0}'' must match pattern ''{1}''."/>
         </module>
+        <module name="PackageName">
+            <property name="format" value="^(beginning\.tdd\.){1}([a-z])+(\.[a-z_][a-z0-9_]*)*$"/> <!-- 패키지 이름은 소문자이며, 'beginning.tdd' 형식으로 시작한다. -->
+        </module>
         <module name="ParameterName">
-            <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
+            <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/> <!-- 변수 이름은 카멜 표기법을 준수한다. -->
             <message key="name.invalidPattern" value="Parameter name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="ClassTypeParameterName">
-            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/> <!-- 변수 이름은 카멜 표기법을 준수한다. -->
             <message key="name.invalidPattern" value="Class type name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="MethodTypeParameterName">
-            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/> <!-- 변수 이름은 카멜 표기법을 준수한다. -->
             <message key="name.invalidPattern" value="Method type name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="StaticVariableName">
-            <property name="format" value="^[a-z][a-zA-Z0-9]+$"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9]+$"/> <!-- 변수 이름은 카멜 표기법을 준수한다. -->
             <message key="name.invalidPattern" value="Static Variable name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="TypeName">
-            <property name="format" value="^[A-Z][a-zA-Z0-9]+$"/>
+            <property name="format" value="^[A-Z][a-zA-Z0-9]+$"/> <!-- 클래스, 인터페이스 이름은 파스칼 표기법을 준수한다. -->
             <message key="name.invalidPattern" value="Type name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="TypecastParenPad">
-            <property name="tokens" value="RPAREN,TYPECAST"/>
+            <property name="tokens" value="RPAREN,TYPECAST"/> <!-- 타입 캐스팅에는 공백을 삽입하지 않는다. -->
         </module>
         <module name="WhitespaceAfter">
-            <property name="tokens" value="COMMA,SEMI"/>
+            <property name="tokens" value="COMMA,SEMI"/> <!-- 콤마(',')은 뒤에 공백을 삽입한다. 3.3.H 세미콜론(';')은 뒤에 공백을 삽입한다. -->
         </module>
         <module name="WhitespaceAround">
             <property name="tokens" value="ASSIGN,BAND,BAND_ASSIGN,BOR,BOR_ASSIGN,BSR,BSR_ASSIGN,BXOR,BXOR_ASSIGN,COLON,DIV,DIV_ASSIGN,EQUAL,GE,GT,LAND,LCURLY,LE,LITERAL_ASSERT,LITERAL_CATCH,LITERAL_DO,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_FOR,LITERAL_IF,LITERAL_RETURN,LITERAL_SYNCHRONIZED,LITERAL_TRY,LITERAL_WHILE,LOR,LT,MINUS,MINUS_ASSIGN,MOD,MOD_ASSIGN,NOT_EQUAL,PLUS,PLUS_ASSIGN,QUESTION,SL,SLIST,SL_ASSIGN,SR,SR_ASSIGN,STAR,STAR_ASSIGN,LITERAL_ASSERT,TYPE_EXTENSION_AND"/>
@@ -88,6 +86,7 @@
             <property name="allowEmptyMethods" value="true"/>
             <property name="allowEmptyTypes" value="true"/>
             <property name="allowEmptyLoops" value="true"/>
+            <!-- 시작 중괄호('{')는 앞에 공백을 삽입한다. 소괄호('(')는 키워드(if, for, while 등)와 함께 사용하는 경우에만 앞에 공백을 삽입한다. 연산자와 콜론(':')의 앞과 뒤에는 공백을 삽입한다. -->
             <message key="ws.notFollowed" value="WhitespaceAround: ''{0}'' is not followed by whitespace."/>
             <message key="ws.notPreceded" value="WhitespaceAround: ''{0}'' is not preceded with whitespace."/>
         </module>
@@ -128,21 +127,26 @@
             <message key="ws.notPreceded" value="GenericWhitespace ''{0}'' is not preceded with whitespace."/>
         </module>
         <!--
-                <module name="AbbreviationAsWordInName">
-                    <property name="ignoreFinal" value="false"/>
-                    <property name="allowedAbbreviationLength" value="1"/>
-                </module>
-        -->
+         <module name="AbbreviationAsWordInName">
+         <property name="ignoreFinal" value="false"/>
+         <property name="allowedAbbreviationLength" value="1"/>
+         </module>
+         -->
         <module name="OperatorWrap">
             <property name="option" value="NL"/>
             <property name="tokens" value="BAND, BOR, BSR, BXOR, DIV, EQUAL, GE, GT, LAND, LE, LITERAL_INSTANCEOF, LOR, LT, MINUS, MOD, NOT_EQUAL, PLUS, QUESTION, SL, SR, STAR "/>
         </module>
-        <module name="AnnotationLocation">
-            <property name="tokens" value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, METHOD_DEF, CTOR_DEF"/>
-        </module>
-        <module name="AnnotationLocation">
-            <property name="tokens" value="VARIABLE_DEF"/>
-            <property name="allowSamelineMultipleAnnotations" value="true"/>
-        </module>
+        <module name="AnnotationUseStyle"/>
+        <module name="MissingOverride"/>
+
+        <!-- jenkins checkstyle plugin does not yet support.
+         <module name="AnnotationLocation">
+         <property name="tokens" value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, METHOD_DEF, CTOR_DEF"/>
+         </module>
+         <module name="AnnotationLocation">
+         <property name="tokens" value="VARIABLE_DEF"/>
+         <property name="allowSamelineMultipleAnnotations" value="true"/>
+         </module>
+         -->
     </module>
 </module>

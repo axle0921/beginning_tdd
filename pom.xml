@@ -394,9 +394,9 @@
 
 
     <reporting>
-        <!--
+
         <outputDirectory>target/site</outputDirectory>
-        -->
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -411,10 +411,7 @@
                 <version>2.14</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
-                    <!--
-                    <configLocation>${basedir}/src/test/resources/rulesets/checkstyle_ruleset.xml</configLocation>
-                    -->
-                    <configLocation>/Users/axle/Dev/QP/cafe_java_code_checkstyle_v1.0.xml</configLocation>
+                    <configLocation>${basedir}/src/test/resources/rulesets/checkstyle.xml</configLocation>
                 </configuration>
             </plugin>
 
