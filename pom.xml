@@ -388,16 +388,6 @@
                         </excludes>
                     </instrumentation>
                 </configuration>
-                <exclusions>
-                    <exclusion>
-                        <groupId>asm</groupId>
-                        <artifactId>asm</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>asm</groupId>
-                        <artifactId>asm-attrs</artifactId>
-                    </exclusion>
-                </exclusions>
 <!--
                 <executions>
                     <execution>
