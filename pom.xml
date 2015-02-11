@@ -420,7 +420,7 @@
                     <version>2.14</version>
                     <configuration>
                         <encoding>UTF-8</encoding>
-                        <configLocation>/Users/axle/Dev/QP/cafe_java_code_checkstyle_v1.0.xml</configLocation>
+                        <configLocation>checkstyle.xml</configLocation>
                     </configuration>
                 </plugin>
 
