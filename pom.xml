@@ -406,20 +406,6 @@
                 <version>2.0</version>
             </plugin>
 
-            <!-- findbugs-plugin -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <findbugsXmlOutput>true</findbugsXmlOutput>
-                    <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
-                    <xmlOutput>true</xmlOutput>
-                    <includeFilterFile>${basedir}/src/test/resources/rulesets/findbugs_include.xml</includeFilterFile>
-                    <excludeFilterFile>${basedir}/src/test/resources/rulesets/findbugs_exclude.xml</excludeFilterFile>
-                    <classFilesDirectory>target/classes/beginning</classFilesDirectory>
-                </configuration>
-            </plugin>
 
         </plugins>
 
