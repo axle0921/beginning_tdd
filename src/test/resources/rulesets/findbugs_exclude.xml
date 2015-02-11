@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <Match>
+      <Bug pattern="DM_CONVERT_CASE" />
+    </Match>
+    <Match>
+      <Bug pattern="NM_CONFUSING" />
+    </Match>
+    <Match>
+      <Bug pattern="REC_CATCH_EXCEPTION" />
+    </Match>
+    <Match>
+      <Bug pattern="SE_BAD_FIELD" />
+    </Match>
+    <Match>
+      <Bug pattern="SE_NO_SERIALVERSIONID" />
+    </Match>
+    <Match>
+      <Bug pattern="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" />
+    </Match>
+    <Match>
+      <Bug pattern="SBSC_USE_STRINGBUFFER_CONCATENATION" />
+    </Match>
+    <Match>
+      <Bug pattern="WMI_WRONG_MAP_ITERATOR" />
+    </Match>
+    <Match>
+      <Bug pattern="EI_EXPOSE_REP" />
+    </Match>
+    <Match>
+      <Bug pattern="EI_EXPOSE_REP2" />
+    </Match>
+    <Match>
+      <Bug pattern="EQ_DOESNT_OVERRIDE_EQUALS" />
+    </Match>
+</FindBugsFilter>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+        <Match>
+                <Priority value="1" />
+        </Match>
+        <Match>
+                <Priority value="2" />
+        </Match>
+        <Match>
+                <Bug category="DODGY" />
+        </Match>
+        <Match>
+                <Bug category="BAD_PRACTICE" />
+        </Match>
+        <Match>
+                <Bug category="CORRECTNESS" />
+        </Match>
+        <Match>
+                <Bug category="PERFORMANCE" />
+        </Match>
+        <Match>
+                <Bug category="MULTITHREADED_CORRECTNESS" />
+        </Match>
+</FindBugsFilter>
