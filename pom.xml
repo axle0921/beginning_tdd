@@ -19,7 +19,7 @@
         <cobertura.version>2.7</cobertura.version>
         <sonar.core.codeCoveragePlugin>cobertura</sonar.core.codeCoveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-        <sonar.cobertura.reportPath>/target/site/cobertura/coverage.xml</sonar.cobertura.reportPath>
+        <sonar.cobertura.reportPath>**/target/site/cobertura/coverage.xml</sonar.cobertura.reportPath>
     </properties>
     <dependencies>
         <!-- Spring -->
