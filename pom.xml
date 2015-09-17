@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 
-
+        <sonar.java.coveragePlugin>cobertura</sonar.java.coveragePlugin>
         <cobertura.version>2.7</cobertura.version>
         <sonar.core.codeCoveragePlugin>cobertura</sonar.core.codeCoveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
