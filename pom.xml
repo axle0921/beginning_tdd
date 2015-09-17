@@ -15,12 +15,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 
+
+        <cobertura.version>2.7</cobertura.version>
+        <sonar.core.codeCoveragePlugin>cobertura</sonar.core.codeCoveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-        <sonar.junit.reportsPath>target/site</sonar.junit.reportsPath>
-        <sonar.java.coveragePlugin>cobertura</sonar.java.coveragePlugin>
         <sonar.cobertura.reportPath>/target/site/cobertura/coverage.xml</sonar.cobertura.reportPath>
-
-
     </properties>
     <dependencies>
         <!-- Spring -->
