@@ -369,7 +369,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.6</version>
+                <version>2.5.2</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <formats>
@@ -425,7 +425,6 @@
                 <version>3.0.0</version>
                 <configuration>
                     <findbugsXmlOutput>true</findbugsXmlOutput>
-                    <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
                     <xmlOutput>true</xmlOutput>
                     <includeFilterFile>${basedir}/src/test/resources/rulesets/findbugs_include.xml</includeFilterFile>
                     <excludeFilterFile>${basedir}/src/test/resources/rulesets/findbugs_exclude.xml</excludeFilterFile>
@@ -488,7 +487,6 @@
                 <version>3.0.0</version>
                 <configuration>
                     <findbugsXmlOutput>true</findbugsXmlOutput>
-                    <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
                     <xmlOutput>true</xmlOutput>
                     <includeFilterFile>${basedir}/src/test/resources/rulesets/findbugs_include.xml</includeFilterFile>
                     <excludeFilterFile>${basedir}/src/test/resources/rulesets/findbugs_exclude.xml</excludeFilterFile>
