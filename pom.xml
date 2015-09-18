@@ -351,6 +351,7 @@
             <!-- CI-Plugins -->
 
             <!-- test-coverage-jacoco-plugin -->
+<!--
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -371,8 +372,9 @@
                     </execution>
                 </executions>
             </plugin>
+-->
 
-            <!-- test-coverage-cobertura -->
+            <!-- jenkins test-coverage-cobertura -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
@@ -394,19 +396,9 @@
                             <exclude>**/BasicMockitoTest.java</exclude>
                         </excludes>
                     </instrumentation>
+                    <check/>
                 </configuration>
-<!--
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>cobertura</goal>
-                        </goals>
-                    </execution>
-                </executions>
--->
             </plugin>
-
 
             <!-- checkstyle-plugin -->
             <plugin>
